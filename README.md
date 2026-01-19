@@ -18,7 +18,7 @@ Un starter pack WordPress moderne basé sur [Roots Bedrock](https://roots.io/bed
 
 1. **Arxama Stack Dev** doit être installé et lancé
    ```bash
-   cd ../arxama-stack
+   cd ../stack-dev-arxama
    make up
    ```
 
@@ -306,7 +306,3 @@ Les contributions sont les bienvenues ! N'hésitez pas à ouvrir une issue ou un
 ## 📄 Licence
 
 MIT License - voir le fichier LICENSE pour plus de détails.
-
----
-
-Made with ❤️ for Arxama Stack Dev
