@@ -7,7 +7,7 @@
 Assurez-vous que la **Arxama Stack Dev** est lancée :
 
 ```bash
-cd ../stack-dev-arxama
+cd ../arxama-stack
 make up
 ```
 

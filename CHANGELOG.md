@@ -5,6 +5,41 @@ Toutes les modifications notables de ce projet seront documentées dans ce fichi
 Le format est basé sur [Keep a Changelog](https://keepachangelog.com/fr/1.0.0/),
 et ce projet adhère au [Semantic Versioning](https://semver.org/lang/fr/).
 
+## [1.2.0] - 2026-01-19
+
+### Ajouté
+- 🚀 **CI/CD complet avec GitHub Actions**
+  - Workflow de tests automatiques (CI)
+  - Workflow de déploiement SSH
+  - Workflow de déploiement FTP
+  - Workflow de déploiement Docker
+- 🤖 **Script de création de projet automatisé** (`create-new-project.sh`)
+  - Création automatique du repo GitHub via GitHub CLI
+  - Configuration du thème au choix (Elementor/Divi/Blank)
+  - Sélection du type de déploiement (SSH/FTP/Docker)
+  - Génération automatique des salts WordPress
+  - Push initial automatique
+- 📚 **Documentation CI/CD complète**
+  - Guide général CI/CD (docs/deployment/README.md)
+  - Guide déploiement SSH (docs/deployment/DEPLOY-SSH.md)
+  - Guide déploiement FTP (docs/deployment/DEPLOY-FTP.md)
+  - Guide déploiement Docker (docs/deployment/DEPLOY-DOCKER.md)
+  - Quick Start CI/CD (docs/deployment/QUICKSTART.md)
+- 🐳 **Dockerfile Nginx** pour déploiement Docker
+- 🔒 **Scan de sécurité** avec Trivy dans le workflow CI
+- 🧪 **Tests automatiques** (PHP syntax, CodeSniffer, JavaScript build, Docker build)
+- 🌍 **Support multi-environnements** (production, staging avec GitHub Environments)
+- 🔔 **Support notifications** (templates Slack, Discord)
+- ⚙️ **Workflows optimisés** avec cache Composer et NPM
+
+### Amélioré
+- 📝 Workflows GitHub Actions avec cache pour performance
+- 🔐 Gestion sécurisée des secrets GitHub par environnement
+- 📦 Build assets automatique avant chaque déploiement
+- 🎯 Exclusion intelligente des fichiers au déploiement
+- 🔄 Commandes post-déploiement personnalisables
+- 📊 Monitoring intégré via GitHub Actions
+
 ## [1.1.0] - 2026-01-19
 
 ### Ajouté
