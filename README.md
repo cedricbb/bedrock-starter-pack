@@ -7,6 +7,7 @@ Un starter pack WordPress moderne basé sur [Roots Bedrock](https://roots.io/bed
 - 🎯 **Bedrock** - Structure WordPress moderne avec Composer
 - 🐳 **Docker** - Environnement de développement complet
 - 🔒 **HTTPS** - Intégration native avec Traefik (Arxama Stack)
+- 🎨 **3 Thèmes Starter** - Elementor, Divi, ou Blank (voir [THEMES.md](THEMES.md))
 - 📦 **Composer** - Gestion des dépendances PHP
 - 🎨 **Vite** - Build tool moderne pour les assets
 - 🗄️ **MariaDB** - Base de données (via Arxama Stack)
@@ -91,6 +92,24 @@ Après l'installation, votre site est accessible à :
 - **PhpMyAdmin**: https://phpmyadmin.arxama.local
 - **Mailhog**: https://mailhog.arxama.local
 - **PgAdmin**: https://pgadmin.arxama.local
+
+## 🎨 Choix du thème starter
+
+Le starter pack supporte **3 configurations** :
+
+1. **Elementor** (gratuit) - Hello Elementor + Elementor plugin
+2. **Divi** (premium) - Divi theme (licence requise)
+3. **Blank** (gratuit) - Installation basique pour thème custom
+
+### Installation avec choix de thème
+
+```bash
+./scripts/install-with-theme.sh
+```
+
+Le script vous demandera de choisir votre thème préféré et configurera automatiquement l'environnement.
+
+📚 **Guide détaillé** : Consultez [THEMES.md](THEMES.md) pour choisir le bon thème pour votre projet
 
 ## 🛠️ Commandes disponibles
 

@@ -5,6 +5,26 @@ Toutes les modifications notables de ce projet seront documentées dans ce fichi
 Le format est basé sur [Keep a Changelog](https://keepachangelog.com/fr/1.0.0/),
 et ce projet adhère au [Semantic Versioning](https://semver.org/lang/fr/).
 
+## [1.1.0] - 2026-01-19
+
+### Ajouté
+- 🎨 **Support pour plusieurs thèmes starter**
+  - Configuration Elementor (Hello Elementor + Elementor plugin)
+  - Configuration Divi (thème premium avec installation guidée)
+  - Configuration Blank (base minimale pour thèmes custom)
+- 📚 Script d'installation interactif avec choix de thème (`install-with-theme.sh`)
+- 📖 Documentation complète pour chaque thème :
+  - `themes-config/elementor/README.md` - Guide Elementor complet
+  - `themes-config/divi/README.md` - Guide Divi complet  
+  - `themes-config/blank/README.md` - Guide développement custom
+- 📋 `THEMES.md` - Guide de sélection et comparaison des thèmes
+- ⚙️ Configuration Composer spécifique pour chaque thème
+- 🚀 Post-installation automatique selon le thème choisi
+
+### Amélioré
+- 📝 README.md mis à jour avec section thèmes starter
+- 🎯 Expérience d'installation plus guidée et flexible
+
 ## [1.0.0] - 2026-01-19
 
 ### Ajouté
