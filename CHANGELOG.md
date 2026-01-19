@@ -5,6 +5,42 @@ Toutes les modifications notables de ce projet seront documentées dans ce fichi
 Le format est basé sur [Keep a Changelog](https://keepachangelog.com/fr/1.0.0/),
 et ce projet adhère au [Semantic Versioning](https://semver.org/lang/fr/).
 
+## [1.3.0] - 2026-01-19
+
+### Ajouté
+- 🔄 **Système complet de migration WordPress → Bedrock**
+  - Script automatique de migration (`scripts/migration/migrate-to-bedrock.sh`)
+  - Détection automatique de l'installation WordPress existante
+  - Analyse des plugins (Elementor, Divi)
+  - Conversion automatique de wp-config.php vers .env
+  - Migration intelligente des fichiers au bon emplacement
+  - Export automatique de la base de données
+  - Génération de fichier MIGRATION-NOTES.md avec les prochaines étapes
+  - Support de la création GitHub repo post-migration
+- 📚 **Documentation migration complète**
+  - Guide principal (docs/migration/README.md) - 40+ pages
+  - Quick Start migration (docs/migration/QUICKSTART.md)
+  - Tableau de correspondance fichiers (docs/migration/FILE-MAPPING.md)
+  - Cas d'usage : Elementor, Divi, Multisite, Hébergement mutualisé
+  - Troubleshooting complet
+  - Checklist post-migration
+- 🎯 **Support migrations spécifiques**
+  - Migration avec Elementor (détection auto)
+  - Migration avec Divi (détection auto)
+  - Migration avec plugins custom
+  - Migration WordPress Multisite
+  - Migration depuis hébergement sans SSH (FTP)
+- ✅ **Vérifications automatiques**
+  - Détection structure WordPress
+  - Validation wp-config.php
+  - Extraction configuration DB
+  - Génération salts WordPress
+  
+### Amélioré
+- 📝 Documentation enrichie avec exemples de migration
+- 🔧 Script de migration avec gestion d'erreurs robuste
+- 🎨 Support plugins/thèmes gérés par Composer (évite duplication)
+
 ## [1.2.0] - 2026-01-19
 
 ### Ajouté
