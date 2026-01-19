@@ -1,0 +1,31 @@
+# Docker Compose Override Example
+# Copiez ce fichier vers docker-compose.override.yml pour personnaliser votre configuration locale
+# Ce fichier est ignoré par git
+
+services:
+  wordpress:
+    # Exemple: Ajouter des variables d'environnement supplémentaires
+    # environment:
+    #   - XDEBUG_MODE=debug
+    #   - XDEBUG_CONFIG=client_host=host.docker.internal
+    
+    # Exemple: Monter des volumes supplémentaires
+    # volumes:
+    #   - ./custom-config.ini:/usr/local/etc/php/conf.d/custom.ini
+
+  nginx:
+    # Exemple: Exposer Nginx sur un port différent
+    # ports:
+    #   - "8080:80"
+
+  # Exemple: Ajouter un service supplémentaire
+  # adminer:
+  #   image: adminer
+  #   restart: unless-stopped
+  #   networks:
+  #     - backend
+  #   labels:
+  #     - "traefik.enable=true"
+  #     - "traefik.http.routers.adminer-${PROJECT_NAME}.rule=Host(`adminer-${PROJECT_NAME}.arxama.local`)"
+  #     - "traefik.http.routers.adminer-${PROJECT_NAME}.entrypoints=websecure"
+  #     - "traefik.http.routers.adminer-${PROJECT_NAME}.tls=true"

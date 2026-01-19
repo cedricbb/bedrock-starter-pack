@@ -1,0 +1,50 @@
+services:
+  wordpress:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ${PROJECT_NAME:-myproject}-wordpress
+    restart: unless-stopped
+    volumes:
+      - ./:/var/www/html
+    environment:
+      - DB_NAME=${DB_NAME}
+      - DB_USER=${DB_USER}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - DB_HOST=${DB_HOST}
+    networks:
+      - backend
+    depends_on:
+      - nginx
+
+  nginx:
+    image: nginx:alpine
+    container_name: ${PROJECT_NAME:-myproject}-nginx
+    restart: unless-stopped
+    volumes:
+      - ./:/var/www/html
+      - ./docker/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+    networks:
+      - backend
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.${PROJECT_NAME:-myproject}.rule=Host(`${PROJECT_NAME:-myproject}.arxama.local`)"
+      - "traefik.http.routers.${PROJECT_NAME:-myproject}.entrypoints=websecure"
+      - "traefik.http.routers.${PROJECT_NAME:-myproject}.tls=true"
+      - "traefik.http.services.${PROJECT_NAME:-myproject}.loadbalancer.server.port=80"
+
+  node:
+    image: node:20-alpine
+    container_name: ${PROJECT_NAME:-myproject}-node
+    restart: unless-stopped
+    working_dir: /var/www/html
+    volumes:
+      - ./:/var/www/html
+    command: sh -c "npm install && npm run dev"
+    networks:
+      - backend
+
+networks:
+  backend:
+    external: true
